@@ -2,6 +2,8 @@
 
 #include <raylib.h>
 
+using namespace window_draw;
+
 static void game_loop ();
 
 /**
@@ -11,7 +13,14 @@ static void game_loop ();
 
 void cube_solver(void)
 {
+	window window("Virtual Rubik's Cube Solver");
 
+	window.init_3dcamera();
+
+	while(!WindowShouldClose())
+		game_loop();
+
+	window.close_window();
 }
 
 /**

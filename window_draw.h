@@ -5,12 +5,11 @@ namespace window_draw {
 
 class window {
 private:
-	int window_width = 1280;
-	int window_height = 720;
-
+	const char *Title;
 public:
-	void init_window();
-	void init_camera();
+	window(const char *str);
+	void init_3dcamera();
+	void close_window();
 }; /* class window */
 
 } /* window_draw */
